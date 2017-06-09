@@ -1,8 +1,8 @@
 import com.typesafe.sbt.SbtScalariform
 
-organization := "com.vicpara"
+organization := "com.vicpara.ai"
 
-name := "pdf-qa"
+name := "semantics"
 
 releaseVersionFile := file("version.sbt")
 
@@ -31,18 +31,15 @@ publishArtifact in Test := false
 libraryDependencies ++= Seq(
   "org.joda" % "joda-convert" % "1.8.1" withSources() withJavadoc(),
   "joda-time" % "joda-time" % "2.9.4" withSources() withJavadoc(),
-  "com.github.scala-incubator.io" %% "scala-io-core" % "0.4.3" withSources() withJavadoc(),
-  "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.3" withSources() withJavadoc(),
   "org.rogach" % "scallop_2.11" % "0.9.6" withSources() withJavadoc(),
   "log4j" % "log4j" % "1.2.17" withSources() withJavadoc(),
-
   "org.scalaj" %% "scalaj-http" % "2.3.0" withSources() withJavadoc(),
-  "org.scalaz" %% "scalaz-core" % "7.1.0" withSources() withJavadoc(),
-  "org.scalaz" % "scalaz-concurrent_2.11" % "7.1.0" withSources() withJavadoc(),
-  
-  "org.scalacheck" %% "scalacheck" % "1.12.1" % "test" withSources() withJavadoc(),
-  "org.specs2" %% "specs2-core" % "2.4.15" % "test" withSources() withJavadoc(),
-  "org.specs2" %% "specs2-scalacheck" % "2.4.15" % "test" withSources() withJavadoc(),
+  "org.scalaz" % "scalaz-core_2.12" % "7.2.13" withSources() withJavadoc(),
+  "org.scalaz" % "scalaz-concurrent_2.12" % "7.2.13" withSources() withJavadoc(),
+
+  "org.scalacheck" % "scalacheck_2.12" % "1.13.5" % "test" withSources() withJavadoc(),
+  "org.specs2" % "specs2-core_2.12" % "3.9.0" % "test" withSources() withJavadoc(),
+  "org.specs2" % "specs2-scalacheck_2.12" % "3.9.0" % "test" withSources() withJavadoc(),
 
   "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.7.2" withSources() withJavadoc(),
 
